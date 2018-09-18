@@ -1,6 +1,6 @@
 import csv
-from fournisseur import Fournisseur
-from compagnie import Compagnie
+from provider import Provider
+from company import Company
 
 def read_csv(filename):
     output_array = []
@@ -34,13 +34,13 @@ probabilite_A = [[0.2, 0.96], [0.3, 0.97], [0.3, 0.98], [0.2, 0.99]]
 probabilite_B = [[0.5, 0.97], [0.5, 0.98]]
 probabilite_C = [[1, 1]]
 
-fournisseur_A = Fournisseur(max_A, delais_A, cout_base_A, prix_A, probabilite_A)
-fournisseur_B = Fournisseur(max_B, delais_B, cout_base_B, prix_B, probabilite_B)
-fournisseur_C = Fournisseur(max_C, delais_C, cout_base_C, prix_C, probabilite_C)
+fournisseur_A = Provider(max_A, delais_A, cout_base_A, prix_A, probabilite_A)
+fournisseur_B = Provider(max_B, delais_B, cout_base_B, prix_B, probabilite_B)
+fournisseur_C = Provider(max_C, delais_C, cout_base_C, prix_C, probabilite_C)
 
-compagnie = Compagnie(1000, 0, 1000, 3)
+compagnie = Company(1000, 0, 1000, 3)
 
-compagnie.achat(fournisseur_A, 10000)
+compagnie.buy(fournisseur_A, 10000)
 
 
 #for attr in dir(fournisseur_A):
